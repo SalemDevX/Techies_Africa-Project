@@ -7,11 +7,11 @@ import Unveiling from "../Home/Unveiling";
 
 const Home = () => {
   return (
-    <section className="bg-dark xl:pt-10 pt-40">
-      <div className="relative pb-16 h-full rounded-b-[5%]">
-        <div className="max-w-[85%] mx-auto px-1 xl:pt-24 items-center xl:grid lg:grid-cols-2 h-full">
-          <div className="flex flex-col justify-center h-full basis-1/3 text-white">
-            <h1 className="text-4xl xl:text-8xl font-bold mb-4">
+    <section className="bg-dark xl:pt-10">
+      <div className="relative pb-16 h-full items-center justify-center rounded-b-[5%] bg-dark2">
+        <div className="max-w-[85%] mx-auto px-1 xl:pt-24 items-center xl:grid xl:grid-cols-2 h-full pt-40">
+          <div className="flex flex-col justify-center h-full md:basis-2/3 text-white">
+            <h1 className="text-5xl md:text-7xl font-light mb-4">
               African Techies Unleash Your Full Potential
             </h1>
             <p className="mb-6 mr-0 xl:mr-6 text-[#F2F2F2] font-normal  xl:text-lg">
@@ -23,11 +23,11 @@ const Home = () => {
               <Button>Join our community</Button>
             </div>
           </div>
-          <div className="hidden md:grid md:basis-2/3 pt-20">
+          <div className="hidden md:grid basis-1/3 pt-20">
             <img
               src={BackgroundImg}
               alt="Background Image"
-              className="w-auto h-full object-cover"
+              className=" h-full object-cover"
             />
           </div>
         </div>
