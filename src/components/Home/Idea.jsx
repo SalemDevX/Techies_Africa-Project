@@ -7,13 +7,13 @@ const Idea = () => {
       <div className="bg-white relative pb-10 h-full">
         <div className="max-w-[85%] mx-auto px-1 pt-12 xl:pt-20 items-center xl:grid lg:grid-cols-2 h-full max-w">
           <div className="flex flex-col justify-center h-full basis-1/3 text-dark">
-            <h6 className=" font-semibold text-lg xl:text-2xl  text-[#5846FB] mb-4">
+            <h6 className=" font-semibold text-xl xl:text-2xl  text-[#5846FB] mb-4">
               Who we are at Techies Africa
             </h6>
-            <h1 className="text-4xl xl:leading-[120%] xl:text-7xl font-semibold mb-2 xl:mr-20">
+            <h1 className="text-5xl xl:text-7xl font-semibold mb-2 xl:mr-20">
               The Idea Behind our Innovation
             </h1>
-            <p className=" mb-4 xl:mb-10 mr-0 xl:mr-20 text-base xl:text-lg font-medium text-dark">
+            <p className=" mb-4 xl:mb-10 mr-0 xl:mr-20 xl:text-lg font-semibold text-dark">
               Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet
               faucibus tincidunt eu adipiscing sociis arcu lorem porttitor.
             </p>
