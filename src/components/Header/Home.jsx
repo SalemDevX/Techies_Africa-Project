@@ -3,12 +3,13 @@ import Button from "../Button";
 import BackgroundImg from "../Asset/Hero/Map.png";
 import BransImg from "../Asset/Hero/Partners.png";
 import Idea from "../Home/Idea";
+import Unveiling from "../Home/Unveiling";
 
 const Home = () => {
   return (
     <section className="bg-dark">
-      <div className="relative pb-24 h-full bg-dark2 rounded-b-[5%]">
-        <div className="max-w-[85%] mx-auto px-1 pt-32 items-center xl:grid lg:grid-cols-2 h-full max-w">
+      <div className="relative pb-16 h-full bg-dark2 rounded-b-[5%]">
+        <div className="max-w-[85%] mx-auto px-1 pt-32 xl:pt-24 items-center xl:grid lg:grid-cols-2 h-full max-w">
           <div className="flex flex-col justify-center h-full basis-1/3 text-white">
             <h1 className=" text-4xl xl:text-7xl font-bold mb-4 ">
               African Techies Unleash Your Full Potential
@@ -18,7 +19,9 @@ const Home = () => {
               greatest potential. Join us to elevate your skills and transform
               your tech dreams into reality. Let's innovate together!
             </p>
-            <Button>Join our community</Button>
+            <div className=" w-60">
+              <Button>Join our community</Button>
+            </div>
           </div>
           <div className="hidden md:grid md:basis-2/3 pt-20">
             <img
@@ -34,6 +37,7 @@ const Home = () => {
         </div>
       </div>
       <Idea />
+      <Unveiling />
     </section>
   );
 };
