@@ -4,6 +4,7 @@ import BackgroundImg from "../Asset/Hero/Map.png";
 import BrandsImg from "../Asset/Hero/Partners.png";
 import Idea from "../Home/Idea";
 import Unveiling from "../Home/Unveiling";
+import OurServices from "../Home/OurServices";
 
 const Home = () => {
   return (
@@ -38,6 +39,7 @@ const Home = () => {
       </div>
       <Idea />
       <Unveiling />
+      <OurServices />
     </section>
   );
 };

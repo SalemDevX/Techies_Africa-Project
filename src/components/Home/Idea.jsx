@@ -22,7 +22,7 @@ const Idea = () => {
             </div>
           </div>
           <div className=" md:grid md:basis-2/3">
-            <img src={IdeaImg} alt="" className="w-auto h-full object-cover" />
+            <img src={IdeaImg} alt="" className="w-[100%] xl:w-auto h-full object-cover" />
           </div>
         </div>
       </div>
