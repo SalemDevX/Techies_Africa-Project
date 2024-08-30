@@ -10,6 +10,9 @@ const Navbar = () => {
   const handleNav = () => {
     setNav(!nav);
   };
+  const closeNav = () => {
+    setNav(false);
+  };
 
   const navLinkStyles = ({ isActive, label }) => {
     if (label === "Fun Center") {
@@ -77,9 +80,9 @@ const Navbar = () => {
 
         <div onClick={handleNav} className="block md:hidden">
           {nav ? (
-            <AiOutlineClose size={20} color="black" />
+            <AiOutlineClose size={20} color="black" onClick={closeNav} />
           ) : (
-            <AiOutlineMenu size={20} color="black" />
+            <AiOutlineMenu size={20} color="black" onClick={handleNav} />
           )}
         </div>
         <ul
@@ -90,15 +93,15 @@ const Navbar = () => {
           }
         >
           <div className="w-full flex items-center   justify-between m-2">
-            <NavLink to="/" aria-label="Home" title="Home">
+            <NavLink onClick={closeNav} to="/" aria-label="Home" title="Home">
               <img className="w-[230px]" src={Logo} alt="Logo" />
             </NavLink>
 
             <div onClick={handleNav} className="block md:hidden mx-4 ">
               {nav ? (
-                <AiOutlineClose size={20} color="black" />
+                <AiOutlineClose size={20} color="black" onClick={closeNav} />
               ) : (
-                <AiOutlineMenu size={20} color="black" />
+                <AiOutlineMenu size={20} color="black" onClick={handleNav} />
               )}
             </div>
           </div>
@@ -107,6 +110,7 @@ const Navbar = () => {
             <li
               key={index}
               className="p-2 border border-light rounded-sm m-4 text-base text-dark2"
+              onClick={closeNav}
             >
               <NavLink
                 style={({ isActive }) =>
