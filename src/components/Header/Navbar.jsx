@@ -39,7 +39,7 @@ const Navbar = () => {
 
   return (
     <div
-      className="fixed top-0 left-0 w-full h-24 border border-b-secondary bg-white"
+      className="fixed top-0 left-0 w-full h-24 md:border-b  md:border-b-secondary bg-white"
       style={{ zIndex: "1000" }}
     >
       <div className="flex justify-between items-center h-24 max-w-[85%] mx-auto px-1 text-white max-w">

@@ -24,7 +24,7 @@ const Unveiling = () => {
               Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet
               faucibus tincidunt eu adipiscing sociis arcu lorem porttitor.
             </p>
-            <div className=" w-60 mb-12 xl:mb-0">
+            <div className=" w-60 mb-12 xl:mb-0 text-white">
               <Button>Join our community</Button>
             </div>
           </div>
