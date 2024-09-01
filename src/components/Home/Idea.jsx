@@ -5,9 +5,9 @@ const Idea = () => {
   return (
     <section>
       <div className="bg-white relative pb-12 h-full">
-        <div className="max-w-[85%] mx-auto px-1 py-20 items-center xl:grid lg:grid-cols-2 h-full max-w">
+        <div className="max-w-[85%] mx-auto px-1 py-24 items-center xl:grid lg:grid-cols-2 h-full max-w">
           <div className="flex flex-col justify-center h-full basis-1/3 text-dark">
-            <h6 className=" font-semibold text-2xl text-[#5846FB] mb-8">
+            <h6 className=" font-semibold text-2xl text-[#5846FB] mb-4">
               Who we are at Techies Africa
             </h6>
             <h1 className="text-5xl xl:text-7xl font-semibold mb-4 xl:pr-40">
