@@ -6,16 +6,16 @@ const NewsLetter = () => {
   return (
     <section>
       <div className="bg-[#F2F2F2]">
-        <div className="max-w-[85%] mx-auto py-4 flex flex-col xl:flex xl:flex-row  items-center justify-between ">
+        <div className="max-w-[85%] mx-auto py-10 flex flex-col xl:flex xl:flex-row  items-center justify-between ">
           <div className="flex items-center">
-            <div className="">
+            <div className=" ml-[-80px] mb-5 xl:mb-0">
               <img className="w-[230px]" src={Logo} alt="Logo" />
             </div>
           </div>
 
-          <div className="flex flex-col xl:flex xl:flex-row  items-center gap-6">
-            <div className="xl:text-right ">
-              <h2 className="text-2xl font-bold">
+          <div className="flex flex-col xl:flex xl:flex-row items-center gap-6">
+            <div className="xl:text-right mx-5 xl:mx-0">
+              <h2 className="text-2xl font-bold mb-5 xl:mb-0">
                 Enter your email to get our newsletter
               </h2>
               <p className="text-[#565656] xl:mr-16 font-bold text-sm">
@@ -24,7 +24,7 @@ const NewsLetter = () => {
             </div>
 
             {/* Input and Button Section */}
-            <div className="flex items-center border border-white text-white rounded-full overflow-hidden bg-white py-2 ">
+            <div className="flex items-center border border-white text-white rounded-full overflow-hidden bg-white py-2 pr-1 ">
               <input
                 type="text"
                 placeholder="Enter your email address"
