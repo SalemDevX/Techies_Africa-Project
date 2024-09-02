@@ -145,7 +145,7 @@ const OurServices = () => {
           ))}
         </div>
       </div>
-      <div className=" flex justify-center mb-12 text-secondary pt-12">
+      <div className=" flex justify-center mb-5 text-secondary pt-12">
         <Button
           backgroundColor="white"
           borderColor="#A24EEC"

@@ -5,6 +5,8 @@ import BrandsImg from "../Asset/Hero/Partners.png";
 import Idea from "../Home/Idea";
 import Unveiling from "../Home/Unveiling";
 import OurServices from "../Home/OurServices";
+import WeekendEvent from "../Home/WeekendEvent";
+import ArtCreation from "../Home/ArtCreation";
 
 const Home = () => {
   return (
@@ -40,6 +42,8 @@ const Home = () => {
       <Idea />
       <Unveiling />
       <OurServices />
+      <WeekendEvent />
+      <ArtCreation />
     </section>
   );
 };
