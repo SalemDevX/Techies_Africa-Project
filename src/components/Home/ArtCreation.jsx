@@ -14,10 +14,10 @@ const ArtCreation = () => {
             <h6 className=" font-semibold xl:text-2xl  text-[#5846FB] mb-4">
               Our Work Process
             </h6>
-            <h1 className="text-4xl xl:leading-[120%] xl:text-7xl font-normal mb-4 xl:mr-20 text-dark">
+            <h1 className="text-4xl xl:leading-[120%] xl:text-7xl font-semibold mb-4 xl:mr-20 text-dark">
               The Art of Our Creative Process
             </h1>
-            <p className=" mb-4 xl:mb-10 mr-0 xl:mr-22 xl:text-lg font-light text-dark">
+            <p className=" mb-2 xl:mb-10 mr-0 xl:mr-22 xl:text-lg font-light text-dark">
               Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet
               faucibus tincidunt eu adipiscing sociis arcu lorem porttitor.
             </p>
