@@ -1,16 +1,17 @@
 import React from "react";
 import Video from "../Asset/video.png";
 import Button from "../Button";
+import NewsLetter from "./NewsLetter";
 
 const ArtCreation = () => {
   return (
     <section>
       <div className=" bg-white">
-        <div className="max-w-[85%] bg-white mx-auto px-1 pt-16 xl:pt-20 flex flex-col-reverse items-center xl:grid xl:grid-cols-2 h-full max-w gap-x-10 mb-12">
-          <div className=" xl:m-4 md:grid md:basis-1/3">
+        <div className="max-w-[85%] bg-white mx-auto px-1 pt-16 xl:pt-20 flex flex-col-reverse items-center xl:grid xl:grid-cols-2 h-full max-w gap-x-10 pb-20">
+          <div className=" md:grid md:basis-1/5">
             <img src={Video} alt="" className="w-auto h-full object-cover" />
           </div>
-          <div className="flex flex-col xl:pl-20 justify-center h-full md:grid md:basis-2/3 text-dark">
+          <div className="flex flex-col xl:pt-30 xl:pl-20 justify-center h-full md:grid md:basis-2/3 text-dark">
             <h6 className=" font-semibold xl:text-2xl  text-[#5846FB] mb-4">
               Our Work Process
             </h6>
@@ -27,6 +28,7 @@ const ArtCreation = () => {
           </div>
         </div>
       </div>
+      <NewsLetter />
     </section>
   );
 };
