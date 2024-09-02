@@ -7,6 +7,7 @@ import Unveiling from "../Home/Unveiling";
 import OurServices from "../Home/OurServices";
 import WeekendEvent from "../Home/WeekendEvent";
 import ArtCreation from "../Home/ArtCreation";
+import Footer from "../Home/Footer";
 
 const Home = () => {
   return (
@@ -44,6 +45,7 @@ const Home = () => {
       <OurServices />
       <WeekendEvent />
       <ArtCreation />
+      <Footer />
     </section>
   );
 };
