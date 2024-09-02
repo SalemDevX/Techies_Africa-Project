@@ -90,15 +90,15 @@ const OurServices = () => {
 
   return (
     <div className="bg-white relative pb-12 h-full">
-      <div className="max-w-[85%] mx-auto px-1 py-24 items-center  h-full max-w">
+      <div className="max-w-[85%] mx-auto px-1 py-10 items-center  h-full max-w">
         <div className="flex flex-col justify-center h-full text-dark">
-          <h6 className=" font-semibold text-2xl text-[#5846FB] mb-4">
+          <h6 className=" font-semibold text-2xl pt-6 text-[#5846FB] mb-4">
             Our Services
           </h6>
-          <h1 className="text-5xl xl:text-7xl font-semibold mb-4 ">
+          <h1 className="text-5xl xl:text-7xl  font-semibold mb-4 ">
             What we do at Techies Africa
           </h1>
-          <p className="mb-10 mr-10 xl:mr-72 text-lg font-semibold text-[#000000]">
+          <p className="mb-2 mr-10 xl:mr-72 text-lg font-semibold text-[#000000]">
             Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet
             faucibus tincidunt eu adipiscing sociis arcu lorem porttitor.
           </p>
