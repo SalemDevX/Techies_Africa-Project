@@ -45,7 +45,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center h-24 max-w-[85%] mx-auto px-1 text-white max-w">
         <div className=" logo">
           <NavLink to="/" aria-label="Home" title="Home">
-            <img className="w-[230px]" src={Logo} alt="Logo" />
+          <img className="w-[230px]" src={Logo} alt="Logo" />
           </NavLink>
         </div>
 
