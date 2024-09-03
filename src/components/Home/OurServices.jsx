@@ -156,7 +156,7 @@ const OurServices = () => {
                       </span>
                     ))}
                   </h3>
-                  <p className="text-base xl:text-lg font-semibold mx-4">
+                  <p className="text-base xl:text-lg font-semibold mx-4 mb-5">
                     {card.content.split("<br />").map((paragraph, index) => (
                       <span key={index}>
                         {paragraph}
