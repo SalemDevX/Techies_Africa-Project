@@ -15,7 +15,7 @@ const Home = () => {
       <div className="relative pb-9 xl:pb-16 h-full items-center justify-center rounded-b-[5%] bg-dark2">
         <div className="max-w-[90%] mx-auto px-1 xl:pt-24 items-center xl:grid xl:grid-cols-2 h-full pt-28 ">
           <div className="flex flex-col justify-center h-full md:basis-2/3 text-white">
-            <h1 className="text-7xl  md:text-[77px] font-light mb-4">
+            <h1 className="text-5xl  md:text-[70px] font-light mb-4">
               African Techies Unleash Your Full Potential
             </h1>
             <p className="mb-8 xl:mb-6 mr-0 xl:mr-6 text-[#F2F2F2] font-normal  text-lg">
@@ -38,28 +38,28 @@ const Home = () => {
         <div className="flex flex-col text-white pt-5 xl:pt-3 max-w-[90%] mx-auto">
           <h3 className="text-lg xl:text-2xl mb-8">Our Brands and Partners:</h3>
           <div className="flex xl:flex-row flex-wrap justify-center gap-4 xl:w-full">
-            <div className="xl:w-[24%] md:w-[40%] w-full">
+            <div className="xl:w-[24%] md:w-[40%] w-[80%]">
               <img
                 className="mx-auto"
                 src={BrandsImg1}
                 alt="Brands and Partners Image"
               />
             </div>
-            <div className="xl:w-[24%] md:w-[40%] w-full">
+            <div className="xl:w-[24%] md:w-[40%] w-[80%]">
               <img
                 className="mx-auto"
                 src={BrandsImg2}
                 alt="Brands and Partners Image"
               />
             </div>
-            <div className="xl:w-[24%] md:w-[40%] w-full">
+            <div className="xl:w-[24%] md:w-[40%] w-[80%]">
               <img
                 className="mx-auto"
                 src={BrandsImg1}
                 alt="Brands and Partners Image"
               />
             </div>
-            <div className="xl:w-[24%] md:w-[40%] w-full">
+            <div className="xl:w-[24%] md:w-[40%] w-[80%]">
               <img
                 className="mx-auto"
                 src={BrandsImg1}

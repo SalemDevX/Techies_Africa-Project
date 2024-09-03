@@ -106,12 +106,12 @@ const OurServices = () => {
 
   return (
     <div className="bg-white relative pb-12 h-full">
-      <div className="max-w-[90%] mx-auto py-10 items-center h-full max-w">
+      <div className="max-w-[90%] mx-auto mb-10 xl:mb-0 xl:py-10 items-center h-full max-w">
         <div className="flex flex-col justify-center h-full text-dark">
           <h6 className="font-semibold text-2xl pt-6 text-[#5846FB] mb-4">
             Our Services
           </h6>
-          <h1 className="text-6xl xl:text-7xl font-semibold mb-4">
+          <h1 className="text-5xl xl:text-[70px] font-semibold mb-4">
             What we do at Techies Africa
           </h1>
           <p className="mb-2 mr-10 xl:mr-72 text-xl xl:text-lg font-semibold text-[#000000]">
@@ -141,14 +141,14 @@ const OurServices = () => {
             {cards.map((card) => (
               <div
                 key={card.id}
-                className="inline-block min-w-[360px] xl:min-w-[450px] xl:max-w-[450px] shadow-lg rounded-3xl px-2 py-5 items-center relative bg-[#F0F0F0] snap-center"
+                className="inline-block min-w-[340px] xl:min-w-[450px] xl:max-w-[450px] shadow-lg rounded-3xl px-2 py-5 items-center relative bg-[#F0F0F0] snap-center"
               >
                 {/* Unique icon for each card */}
-                <div className="absolute top-4 left-4 text-yellow-500 bg-primary rounded-full p-3 mx-2 my-5">
+                <div className="absolute top-4 left-4 text-yellow-500 bg-primary rounded-full p-3 xl:mx-2 my-5">
                   <img className="w-12 h-12" src={card.img} alt="" />
                 </div>
                 <div className="mx-2 pt-80 flex flex-col">
-                  <h3 className="text-4xl xl:text-6xl font-normal mb-4 mx-4">
+                  <h3 className="text-4xl xl:text-6xl font-normal mb-4 xl:mx-4">
                     {card.title.split("<br />").map((line, index) => (
                       <span key={index}>
                         {line}
@@ -156,7 +156,7 @@ const OurServices = () => {
                       </span>
                     ))}
                   </h3>
-                  <p className="text-base xl:text-lg font-semibold mx-4 mb-3">
+                  <p className="text-base xl:text-lg font-semibold xl:mx-4  mb-3">
                     {card.content.split("<br />").map((paragraph, index) => (
                       <span key={index}>
                         {paragraph}
@@ -171,11 +171,11 @@ const OurServices = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center mb-5 text-secondary pt-12">
+      <div className="flex justify-center text-secondary pt-8">
         <Button
           backgroundColor="white"
           borderColor="#A24EEC"
-          className="bg-white border-2 border-solid border-secondary"
+          className="bg-white border-8 border-solid border-secondary"
           padding="10px 80px"
         >
           View all services
