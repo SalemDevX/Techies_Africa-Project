@@ -164,7 +164,7 @@ const OurServices = () => {
                       </span>
                     ))}
                   </p>
-                  <p className="text-[#5846FB] mx-4">Learn More</p>
+                  <p className="text-[#5846FB] font-bold mx-4">Learn More</p>
                 </div>
               </div>
             ))}
