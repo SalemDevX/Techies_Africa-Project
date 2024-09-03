@@ -120,46 +120,54 @@ const OurServices = () => {
           </p>
         </div>
       </div>
-      <div className={`w-full ml-4 overflow-hidden bg-white ${isSmallScreen ? 'scroll-snap-container' : ''}`}>
-        <div
-          ref={scrollContainerRef}
-          className={`flex space-x-4 gap-3 ${
-            isSmallScreen ? "snap-x snap-mandatory" : ""
-          }`}
-          style={{
-            overflowX: isSmallScreen ? "scroll" : "hidden",
-            whiteSpace: "nowrap",
-          }}
-        >
-          {cards.map((card) => (
-            <div
-              key={card.id}
-              className="inline-block min-w-[360px] xl:min-w-[450px] xl:max-w-[450px] shadow-lg rounded-3xl px-2 py-5 items-center relative bg-[#F0F0F0] snap-center"
-            >
-              {/* Unique icon for each card */}
-              <div className="absolute top-4 left-4 text-yellow-500 bg-primary rounded-full p-3 mx-2 my-5">
-                <img className="w-12 h-12" src={card.img} alt="" />
+      <div
+        className={`w-full overflow-hidden bg-white ${
+          isSmallScreen ? "scroll-snap-container" : ""
+        }`}
+      >
+        <div className="px-4 md:px-8">
+          {" "}
+          {/* Added padding on both ends */}
+          <div
+            ref={scrollContainerRef}
+            className={`flex space-x-4 gap-3 ${
+              isSmallScreen ? "snap-x snap-mandatory" : ""
+            }`}
+            style={{
+              overflowX: isSmallScreen ? "scroll" : "hidden",
+              whiteSpace: "nowrap",
+            }}
+          >
+            {cards.map((card) => (
+              <div
+                key={card.id}
+                className="inline-block min-w-[360px] xl:min-w-[450px] xl:max-w-[450px] shadow-lg rounded-3xl px-2 py-5 items-center relative bg-[#F0F0F0] snap-center"
+              >
+                {/* Unique icon for each card */}
+                <div className="absolute top-4 left-4 text-yellow-500 bg-primary rounded-full p-3 mx-2 my-5">
+                  <img className="w-12 h-12" src={card.img} alt="" />
+                </div>
+                <div className="mx-2 pt-80 flex flex-col">
+                  <h3 className="text-4xl xl:text-6xl font-normal mb-4 mx-4">
+                    {card.title.split("<br />").map((line, index) => (
+                      <span key={index}>
+                        {line}
+                        <br />
+                      </span>
+                    ))}
+                  </h3>
+                  <p className="text-base xl:text-lg font-semibold mx-4">
+                    {card.content.split("<br />").map((paragraph, index) => (
+                      <span key={index}>
+                        {paragraph}
+                        <br />
+                      </span>
+                    ))}
+                  </p>
+                </div>
               </div>
-              <div className="mx-2 pt-80 flex flex-col">
-                <h3 className="text-4xl xl:text-6xl font-normal mb-4 mx-4">
-                  {card.title.split("<br />").map((line, index) => (
-                    <span key={index}>
-                      {line}
-                      <br />
-                    </span>
-                  ))}
-                </h3>
-                <p className="text-base xl:text-lg font-semibold mx-4">
-                  {card.content.split("<br />").map((paragraph, index) => (
-                    <span key={index}>
-                      {paragraph}
-                      <br />
-                    </span>
-                  ))}
-                </p>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
       <div className="flex justify-center mb-5 text-secondary pt-12">
