@@ -1,4 +1,4 @@
-import React from "react";
+
 import Logo from "../Asset/Techies-Logo.png";
 import Button from "../Button";
 
