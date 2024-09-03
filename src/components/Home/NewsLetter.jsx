@@ -26,7 +26,7 @@ const NewsLetter = () => {
               <input
                 type="text"
                 placeholder="Enter your email address"
-                className="flex-grow border-none text-dark px-4  xl:px-6 mr-18 py-2 focus:outline-none"
+                className="flex-grow border-none text-dark px-3  xl:px-6 mr-18 py-2 focus:outline-none"
               />
               <div className="">
                 <Button padding="8px 35px">Send</Button>
