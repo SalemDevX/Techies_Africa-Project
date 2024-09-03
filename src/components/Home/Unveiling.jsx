@@ -17,7 +17,7 @@ const Unveiling = () => {
             <h6 className=" font-semibold xl:text-2xl  text-[#5846FB] mb-4">
               What is techies Community
             </h6>
-            <h1 className="text-5xl  xl:text-[70px]  font-normal mb-4 xl:mr-20 text-white">
+            <h1 className="text-5xl  xl:text-[67px]  font-normal mb-4 xl:mr-20 text-white">
             Unveiling TechiesAfrica Community
             </h1>
             <p className=" mb-4 xl:mb-10 mr-0 xl:mr-22 text-xl xl:text-lg font-light text-[#F2F2F2]">

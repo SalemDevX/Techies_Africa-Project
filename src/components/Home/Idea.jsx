@@ -10,7 +10,7 @@ const Idea = () => {
             <h6 className=" font-semibold text-2xl text-[#5846FB] mb-4">
               Who we are at Techies Africa
             </h6>
-            <h1 className="text-6xl xl:text-[77px] font-semibold mb-4 xl:pr-40">
+            <h1 className="text-5xl xl:text-[70px] font-semibold mb-4 xl:pr-40">
               The Idea Behind our Innovation
             </h1>
             <p className="mb-5 xl:mb-10 mr-0 xl:mr-40 text-xl xl:text-lg font-medium text-dark">

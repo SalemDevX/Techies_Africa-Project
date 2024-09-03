@@ -35,7 +35,7 @@ const Home = () => {
             />
           </div>
         </div>
-        <div className="flex flex-col text-white pt-5 xl:pt-3 max-w-[90%] mx-auto">
+        <div className="flex flex-col text-white pt-3 xl:pt-3 max-w-[90%] mx-auto">
           <h3 className="text-lg xl:text-2xl mb-8">Our Brands and Partners:</h3>
           <div className="flex xl:flex-row flex-wrap justify-center gap-4 xl:w-full">
             <div className="xl:w-[24%] md:w-[40%] w-[80%]">
