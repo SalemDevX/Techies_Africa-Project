@@ -39,10 +39,10 @@ const Navbar = () => {
 
   return (
     <div
-      className="fixed top-0 left-0 w-full h-24 md:border-b  md:border-b-secondary bg-white"
+      className="fixed top-0 left-0 w-full h-20 xl:h-24 md:border-b  md:border-b-secondary bg-white"
       style={{ zIndex: "1000" }}
     >
-      <div className="flex justify-between items-center h-24 max-w-[85%] mx-auto px-1 text-white max-w">
+      <div className="flex justify-between items-center h-24 max-w-[90%] mx-auto  text-white max-w">
         <div className=" logo">
           <NavLink to="/" aria-label="Home" title="Home">
           <img className="w-[230px]" src={Logo} alt="Logo" />
@@ -80,9 +80,9 @@ const Navbar = () => {
 
         <div onClick={handleNav} className="block md:hidden">
           {nav ? (
-            <AiOutlineClose size={20} color="black" onClick={closeNav} />
+            <AiOutlineClose size={35} color="black" onClick={closeNav} />
           ) : (
-            <AiOutlineMenu size={20} color="black" onClick={handleNav} />
+            <AiOutlineMenu size={35} color="black" onClick={handleNav} />
           )}
         </div>
         <ul
@@ -92,14 +92,14 @@ const Navbar = () => {
               : "fixed left-[-100%]"
           }
         >
-          <div className="w-full flex items-center   justify-between m-2">
+          <div className="w-full flex items-center   justify-between m-3">
             <NavLink onClick={closeNav} to="/" aria-label="Home" title="Home">
               <img className="w-[230px]" src={Logo} alt="Logo" />
             </NavLink>
 
             <div onClick={handleNav} className="block md:hidden mx-4 ">
               {nav ? (
-                <AiOutlineClose size={20} color="black" onClick={closeNav} />
+                <AiOutlineClose size={35} color="black" onClick={closeNav} />
               ) : (
                 <AiOutlineMenu size={20} color="black" onClick={handleNav} />
               )}
