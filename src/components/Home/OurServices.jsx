@@ -120,7 +120,7 @@ const OurServices = () => {
           </p>
         </div>
       </div>
-      <div className={`w-full overflow-hidden bg-white ${isSmallScreen ? 'scroll-snap-container' : ''}`}>
+      <div className={`w-full ml-4 overflow-hidden bg-white ${isSmallScreen ? 'scroll-snap-container' : ''}`}>
         <div
           ref={scrollContainerRef}
           className={`flex space-x-4 gap-3 ${
