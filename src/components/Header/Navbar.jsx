@@ -68,12 +68,12 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <div className="hidden  md:flex items-center  gap-x-2 ">
+        <div className="hidden  w-28  md:flex items-center  gap-x-2 ">
           <div>
             <FiPhoneCall className=" text-3xl text-dark phone" />
           </div>
-          <div>
-            <p className=" text-sm text-light ">Customer Services</p>
+          <div className="flex flex-col">
+        <p className="text-sm text-light">Customer Services</p>
             <p className=" text-sm text-dark font-bold ">(234) 123-4567</p>
           </div>
         </div>
