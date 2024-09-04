@@ -142,6 +142,10 @@ const OurServices = () => {
         className={`w-full overflow-hidden bg-white ${
           isSmallScreen ? "scroll-snap-container" : ""
         }`}
+        style={{
+          position: "relative",
+          overflow: isSmallScreen ? "auto" : "hidden",
+        }}
       >
         <div className="px-4 md:px-8">
           {" "}
@@ -152,10 +156,18 @@ const OurServices = () => {
               isSmallScreen ? "snap-x snap-mandatory" : ""
             }`}
             style={{
+              display: "flex",
               overflowX: isSmallScreen ? "scroll" : "hidden",
               whiteSpace: "nowrap",
+              scrollbarWidth: "none", // For Firefox
             }}
           >
+            {/* Hide scrollbar for WebKit browsers */}
+            <style jsx>{`
+              .scroll-container::-webkit-scrollbar {
+                display: none;
+              }
+            `}</style>
             {cards.map((card) => (
               <div
                 key={card.id}
@@ -174,7 +186,7 @@ const OurServices = () => {
                       </span>
                     ))}
                   </h3>
-                  <p className="text-base xl:text-lg font-semibold xl:mx-4  mb-3">
+                  <p className="text-base xl:text-lg font-semibold xl:mx-4 mb-3">
                     {card.content.split("<br />").map((paragraph, index) => (
                       <span key={index}>
                         {paragraph}
