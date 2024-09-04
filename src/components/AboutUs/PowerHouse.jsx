@@ -2,43 +2,17 @@ import React from "react";
 import { useState, useEffect, useRef } from "react";
 import FounderImage from "../Asset/image 14.png";
 
-
 const PowerHouse = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const scrollContainerRef = useRef(null);
 
   const cards = [
-    {
-      id: 1,
-      name: "Confidence Ugolo",
-      title: "Founder",
-      img: FounderImage,
-    },
-    {
-      id: 2,
-      name: "Confidence Ugolo",
-      title: "Founder",
-      img: FounderImage,
-    },
-    {
-      id: 3,
-      name: "Confidence Ugolo",
-      title: "Founder",
-      img: FounderImage,
-    },
-    {
-      id: 4,
-      name: "Confidence Ugolo",
-      title: "Founder",
-      img: FounderImage,
-    },
-    {
-      id: 5,
-      name: "Confidence Ugolo",
-      title: "Founder",
-      img: FounderImage,
-    },
+    { id: 1, name: "Confidence Ugolo", title: "Founder", img: FounderImage },
+    { id: 2, name: "Confidence Ugolo", title: "Founder", img: FounderImage },
+    { id: 3, name: "Confidence Ugolo", title: "Founder", img: FounderImage },
+    { id: 4, name: "Confidence Ugolo", title: "Founder", img: FounderImage },
+    { id: 5, name: "Confidence Ugolo", title: "Founder", img: FounderImage },
   ];
 
   // Detect screen size change
@@ -97,18 +71,30 @@ const PowerHouse = () => {
           className={`w-full overflow-hidden bg-dark ${
             isSmallScreen ? "scroll-snap-container" : ""
           }`}
+          style={{
+            position: 'relative',
+            overflow: isSmallScreen ? 'auto' : 'hidden',
+          }}
         >
-          <div className=" pt-10 ">
+          <div className="pt-10">
             <div
               ref={scrollContainerRef}
               className={`flex space-x-4 gap-3 ${
                 isSmallScreen ? "snap-x snap-mandatory" : ""
               }`}
               style={{
-                overflowX: isSmallScreen ? "scroll" : "hidden",
-                whiteSpace: "nowrap",
+                display: 'flex',
+                overflowX: isSmallScreen ? 'scroll' : 'hidden',
+                whiteSpace: 'nowrap',
+                scrollbarWidth: 'none', // For Firefox
               }}
             >
+              {/* Hide scrollbar for WebKit browsers */}
+              <style jsx>{`
+                .scroll-container::-webkit-scrollbar {
+                  display: none;
+                }
+              `}</style>
               {cards.map((card) => (
                 <div
                   key={card.id}
