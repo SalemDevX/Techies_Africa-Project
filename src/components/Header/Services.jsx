@@ -1,5 +1,8 @@
 import BackgroundImg from "../Asset/Aboutus-bg.png";
 import Services1 from "../Service/Services";
+import Unveil from "../Service/Unveil";
+import ArtWork from '../Home/ArtCreation'
+import Footer from "../Home/Footer"
 
 const Services = () => {
   return (
@@ -26,6 +29,9 @@ const Services = () => {
         </div>
       </div>
       <Services1 />
+      <Unveil />
+      <ArtWork />
+      <Footer />
     </section>
   );
 };

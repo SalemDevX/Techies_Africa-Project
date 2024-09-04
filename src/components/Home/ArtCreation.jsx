@@ -12,17 +12,17 @@ const ArtCreation = () => {
             <img src={Video} alt="" className="w-auto h-full object-cover" />
           </div>
           <div className="flex flex-col xl:pt-30 xl:pl-20 justify-center h-full md:grid md:basis-2/3 text-dark">
-            <h6 className=" font-semibold xl:text-2xl  text-[#5846FB] mb-4">
+            <h6 className=" font-semibold xl:text-2xl  text-[#5846FB] mb-2 md:mb-0">
               Our Work Process
             </h6>
-            <h1 className="text-5xl xl:text-[70px] font-semibold mb-4 xl:mr-20 text-dark">
+            <h1 className="text-5xl xl:text-[75px] font-semibold mb-2 md:mb-0 xl:mr-32 text-dark">
               The Art of Our Creative Process
             </h1>
-            <p className=" mb-2 xl:mb-10 mr-0 xl:mr-22 text-lg font-light text-dark">
+            <p className=" mb-2 mr-0 xl:mr-10 text-justify text-lg font-light text-dark">
               Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet
               faucibus tincidunt eu adipiscing sociis arcu lorem porttitor.
             </p>
-            <div className=" w-36 mb-12 text-white">
+            <div className=" w-36 mb-10 text-white">
               <Button>Contact Us</Button>
             </div>
           </div>

@@ -6,6 +6,7 @@ import Laptop from "../Asset/Icon/LaptopSettings-Icon.png";
 import QueryInner from "../Asset/Icon/QueryInnerJoin-Icon.png";
 import SecuritySheild from "../Asset/Icon/SecurityShield-Icon.png";
 import Button from "../Button";
+import { NavLink } from "react-router-dom";
 
 const OurServices = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -202,14 +203,16 @@ const OurServices = () => {
         </div>
       </div>
       <div className="flex justify-center text-secondary pt-8">
-        <Button
-          backgroundColor="white"
-          borderColor="#A24EEC"
-          className="bg-white border-8 border-solid border-secondary"
-          padding="10px 80px"
-        >
-          View all services
-        </Button>
+        <NavLink to="/services">
+          <Button
+            backgroundColor="white"
+            borderColor="#A24EEC"
+            className="bg-white border-8 border-solid border-secondary"
+            padding="10px 80px"
+          >
+            View all services
+          </Button>
+        </NavLink>
       </div>
     </div>
   );

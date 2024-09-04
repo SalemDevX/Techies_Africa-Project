@@ -32,7 +32,7 @@ const Navbar = () => {
     { to: "/", label: "Home" },
     { to: "/aboutus", label: "About Us" },
     { to: "/services", label: "Services" },
-    { to: "/project", label: "Projects" },
+    { to: "/projects", label: "Projects" },
     { to: "/funcenter", label: "Fun Center" },
     { to: "/contactus", label: "Contact Us" },
   ];
@@ -68,7 +68,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <div className="hidden  w-28  md:flex items-center  gap-x-2 ">
+        <div className="hidden  md:w-28 xl:w-52  md:flex items-center  gap-x-2 ">
           <div>
             <FiPhoneCall className=" text-3xl text-dark phone" />
           </div>
