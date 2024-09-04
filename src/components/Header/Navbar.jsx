@@ -74,7 +74,7 @@ const Navbar = () => {
           </div>
           <div>
             <p className=" text-sm text-light ">Customer Services</p>
-            <p className=" text-base text-dark font-bold ">(234) 123-4567</p>
+            <p className=" text-sm text-dark font-bold ">(234) 123-4567</p>
           </div>
         </div>
 
