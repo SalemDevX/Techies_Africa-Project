@@ -79,7 +79,7 @@ const PowerHouse = () => {
           <div className="pt-10">
             <div
               ref={scrollContainerRef}
-              className={`flex space-x-4 gap-3 ${
+              className={`flex gap-6 ${
                 isSmallScreen ? "snap-x snap-mandatory" : ""
               }`}
               style={{
