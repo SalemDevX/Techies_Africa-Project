@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect, useRef } from "react";
 import FounderImage from "../Asset/image 14.png";
 
+
 const PowerHouse = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -97,7 +98,7 @@ const PowerHouse = () => {
             isSmallScreen ? "scroll-snap-container" : ""
           }`}
         >
-          <div className=" ">
+          <div className=" pt-10 ">
             <div
               ref={scrollContainerRef}
               className={`flex space-x-4 gap-3 ${

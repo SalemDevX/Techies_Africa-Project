@@ -5,6 +5,7 @@ import VisionMission from "../AboutUs/VisionMission";
 import Values from "../AboutUs/Values";
 import PowerHouse from "../AboutUs/PowerHouse";
 import NewsLetter from "../Home/NewsLetter"
+import Footer from "../Home/Footer";
 
 const AboutUs = () => {
   return (
@@ -35,6 +36,7 @@ const AboutUs = () => {
       <Values />
       <PowerHouse />
       <NewsLetter />
+      <Footer />
     </section>
   );
 };
