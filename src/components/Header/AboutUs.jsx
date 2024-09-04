@@ -1,5 +1,10 @@
 import React from "react";
 import BackgroundImg from "../Asset/Aboutus-bg.png";
+import Idea from "../AboutUs/Idea";
+import VisionMission from "../AboutUs/VisionMission";
+import Values from "../AboutUs/Values";
+import PowerHouse from "../AboutUs/PowerHouse";
+import NewsLetter from "../Home/NewsLetter"
 
 const AboutUs = () => {
   return (
@@ -25,6 +30,11 @@ const AboutUs = () => {
           </h1>
         </div>
       </div>
+      <Idea />
+      <VisionMission />
+      <Values />
+      <PowerHouse />
+      <NewsLetter />
     </section>
   );
 };

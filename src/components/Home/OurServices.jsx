@@ -13,7 +13,6 @@ const OurServices = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const scrollContainerRef = useRef(null);
 
-  // Cards with different icons
   const cards = [
     {
       id: 1,
@@ -98,11 +97,30 @@ const OurServices = () => {
         });
 
         container.scrollLeft = scrollPosition;
-      }, 10);
+      }, 30); // Adjusted to a slower speed
+
+      return () => clearInterval(interval);
+    } else {
+      // Autoplay for small screens
+      const container = scrollContainerRef.current;
+      const cardWidth = container.scrollWidth / cards.length;
+
+      const interval = setInterval(() => {
+        setScrollPosition((prevPosition) => {
+          const newPosition = prevPosition + cardWidth;
+          if (newPosition >= container.scrollWidth) {
+            container.scrollLeft = 0; // Reset to start when reaching the end
+            return 0;
+          } else {
+            container.scrollLeft = newPosition;
+            return newPosition;
+          }
+        });
+      }, 2000); // Time between scrolls (2 seconds)
 
       return () => clearInterval(interval);
     }
-  }, [scrollPosition, scrollDirection, isSmallScreen]);
+  }, [scrollPosition, scrollDirection, isSmallScreen, cards.length]);
 
   return (
     <div className="bg-white relative pb-12 h-full">

@@ -49,7 +49,7 @@ const Navbar = () => {
           </NavLink>
         </div>
 
-        <ul className="hidden md:flex items-center md:w-[80%] justify-center">
+        <ul className="hidden md:flex items-center md:w-[70%] justify-center">
           {navLinks.map((link, index) => (
             <li
               key={index}
