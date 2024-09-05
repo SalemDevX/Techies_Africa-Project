@@ -124,9 +124,10 @@ const OurProject = () => {
             <h6 className="font-semibold text-2xl pt-6 text-[#5846FB] mb-4">
               Our Projects
             </h6>
-            <h1 className="text-5xl xl:text-[70px] font-semibold mb-4 mr-44">
-              Our Groundbreaking Projects
+            <h1 className="text-5xl xl:text-[70px] font-semibold mb-4  break-all xl:whitespace-nowrap">
+              Our Groundbreak{""}ing Projects
             </h1>
+
             <p className="mb-2 mr-10  text-xl xl:text-base font-semibold text-[#000000]">
               Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet
               faucibus tincidunt eu adipiscing sociis arcu lorem porttitor.
