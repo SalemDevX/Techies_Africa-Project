@@ -72,7 +72,7 @@ const ContactForm = () => {
           <div className="flex justify-end">
             <button
               type="submit"
-              className="px-6 py-3 text-white font-semibold rounded-3xl"
+              className="px-20 mb-10 py-3 text-white font-semibold rounded-3xl"
               style={{
                 background: "linear-gradient(90deg, #D929E5 0%, #3D68FB 100%)",
               }}
