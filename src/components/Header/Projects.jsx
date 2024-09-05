@@ -1,6 +1,7 @@
 import React from "react";
 import BackgroundImg1 from "../Asset/Aboutus-bg.png";
 import OurProject from "../Projects/OurProject"
+import ContactForm from "../Projects/ContactForm";
 
 const Projects = () => {
   return (
@@ -27,6 +28,7 @@ const Projects = () => {
         </div>
       </div>
       <OurProject />
+      <ContactForm />
     </section>
   );
 };

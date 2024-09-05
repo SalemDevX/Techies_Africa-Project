@@ -3,6 +3,7 @@ import Img1 from "../Asset/Frame 3.png";
 import Img2 from "../Asset/Frame 383.png";
 import Img3 from "../Asset/Frame 3839.png";
 import Button from "../Button";
+import Attention from "./Attention";
 
 const OurProject = () => {
   const categories = [
@@ -144,9 +145,9 @@ const OurProject = () => {
   return (
     <section>
       <div className="bg-white relative pb-12 h-full">
-        <div className="max-w-[90%] mx-auto mb-10 xl:mb-0 xl:py-10 items-center h-full">
+        <div className="max-w-[90%] mx-auto   xl:mb-0  items-center h-full">
           <div className="flex flex-col justify-center h-full text-dark">
-            <h6 className="font-semibold text-2xl pt-6 text-[#5846FB] mb-4">
+            <h6 className="font-semibold text-2xl xl:mt-10 pt-7 text-[#5846FB] mb-4">
               Our Projects
             </h6>
             <h1 className="text-5xl xl:text-[70px] font-semibold mb-4 break-all xl:whitespace-nowrap">
@@ -159,7 +160,7 @@ const OurProject = () => {
           </div>
 
           {/* Categories bar */}
-          <div className="flex overflow-x-auto lg:w-[73%] xl:w-[90%] space-x-4 py-2 px-2 bg-[#EAEBF0] rounded-lg">
+          <div className="flex overflow-x-auto lg:w-[90%] space-x-4 py-2 px-3 bg-[#EAEBF0] rounded-lg">
             {categories.map((category) => (
               <div
                 key={category}
@@ -175,8 +176,8 @@ const OurProject = () => {
             ))}
           </div>
 
-          <div className="mt-5">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="mt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
               {currentCards.map((card) => (
                 <div
                   key={card.id}
@@ -186,11 +187,13 @@ const OurProject = () => {
                     <img
                       src={card.img}
                       alt={card.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-[240px] object-cover"
                     />
                   </div>
-                  <div className="p-6 text-white">
-                    <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
+                  <div className="pt-24 px-10 text-white">
+                    <h3 className="text-2xl font-semibold mb-2">
+                      {card.title}
+                    </h3>
                     <p className="text-gray-700 mb-2 text-[#9D9FA1]">
                       {card.description}
                     </p>
@@ -199,7 +202,7 @@ const OurProject = () => {
                       <div className="text-white text-xs lg:text-xs xl:text-base">
                         <Button>{card.button1}</Button>
                       </div>
-                      <div className="text-secondary text-xs lg:text-xs xl:text-base">
+                      <div className="text-secondary mb-5 text-xs lg:text-xs xl:text-base">
                         <Button
                           backgroundColor="black"
                           borderColor="#A24EEC"
@@ -237,6 +240,7 @@ const OurProject = () => {
           </div>
         </div>
       </div>
+      <Attention />
     </section>
   );
 };
