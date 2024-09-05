@@ -1,5 +1,6 @@
 import React from "react";
 import BackgroundImg1 from "../Asset/Aboutus-bg.png";
+import OurProject from "../Projects/OurProject"
 
 const Projects = () => {
   return (
@@ -25,6 +26,7 @@ const Projects = () => {
           </h1>
         </div>
       </div>
+      <OurProject />
     </section>
   );
 };
