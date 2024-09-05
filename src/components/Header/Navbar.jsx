@@ -45,15 +45,15 @@ const Navbar = () => {
       <div className="flex justify-between items-center h-24 max-w-[90%] mx-auto  text-white max-w">
         <div className=" logo">
           <NavLink to="/" aria-label="Home" title="Home">
-          <img className="w-[230px]" src={Logo} alt="Logo" />
+          <img className="xl:w-[230px]" src={Logo} alt="Logo" />
           </NavLink>
         </div>
 
-        <ul className="hidden md:flex items-center md:w-[70%] justify-center">
+        <ul className="hidden md:hidden lg:flex items-center lg:w-[70%] lg:justify-end xl:justify-center">
           {navLinks.map((link, index) => (
             <li
               key={index}
-              className="  text-base font-bold text-dark2 m-3 lists"
+              className="  text-base font-bold text-dark2 lg:m-5 xl:m-4 lists"
             >
               <NavLink
                 style={({ isActive }) =>
@@ -68,7 +68,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <div className="hidden  md:w-28 xl:w-52  md:flex items-center  gap-x-2 ">
+        <div className="hidden md:hidden xl:w-52  xl:flex items-center  gap-x-2 ">
           <div>
             <FiPhoneCall className=" text-3xl text-dark phone" />
           </div>
@@ -78,7 +78,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div onClick={handleNav} className="block md:hidden">
+        <div onClick={handleNav} className="block md:block lg:hidden">
           {nav ? (
             <AiOutlineClose size={35} color="black" onClick={closeNav} />
           ) : (
@@ -97,7 +97,7 @@ const Navbar = () => {
               <img className="w-[230px]" src={Logo} alt="Logo" />
             </NavLink>
 
-            <div onClick={handleNav} className="block md:hidden mx-4 ">
+            <div onClick={handleNav} className="block md:block lg:hidden mx-4 ">
               {nav ? (
                 <AiOutlineClose size={35} color="black" onClick={closeNav} />
               ) : (
