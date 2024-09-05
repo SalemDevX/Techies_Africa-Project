@@ -5,14 +5,26 @@ import Img3 from "../Asset/Frame 3839.png";
 import Button from "../Button";
 
 const OurProject = () => {
+  const categories = [
+    "All Projects",
+    "Branding & Design",
+    "Software Development",
+    "AI and Automations",
+    "Integration & Package Dev",
+    "Software Security",
+  ];
+
+  const [activeCategory, setActiveCategory] = useState("All Projects");
+
   const cards = [
     {
       id: 1,
       img: Img1,
       title: "Digital Branding Website",
+      category: "Branding & Design",
       description:
-        "Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet ",
-      by: "By:Techies Africa",
+        "Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet faucibus tincidunt eu adipiscing sociis arcu lorem porttitor.",
+      by: "By: Techies Africa",
       button1: "Read More",
       button2: "Contact Creative",
     },
@@ -20,9 +32,10 @@ const OurProject = () => {
       id: 2,
       img: Img2,
       title: "Tasks Manager App",
+      category: "Software Development",
       description:
-        "Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet ",
-      by: "By:Techies Africa",
+        "Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet faucibus tincidunt eu adipiscing sociis arcu lorem porttitor.",
+      by: "By: Techies Africa",
       button1: "Read More",
       button2: "Contact Creative",
     },
@@ -30,77 +43,89 @@ const OurProject = () => {
       id: 3,
       img: Img3,
       title: "Revolve Brand Identity",
+      category: "Branding & Design",
       description:
-        "Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet ",
-      by: "By:Techies Africa",
+        "Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet faucibus tincidunt eu adipiscing sociis arcu lorem porttitor.",
+      by: "By: Techies Africa",
       button1: "Read More",
       button2: "Contact Creative",
     },
     {
       id: 4,
       img: Img1,
-      title: "Digital Branding Website",
+      title: "E-commerce Platform",
+      category: "Software Development",
       description:
-        "Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet",
-      by: "By:Techies Africa",
+        "Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet faucibus tincidunt eu adipiscing sociis arcu lorem porttitor.",
+      by: "By: Techies Africa",
       button1: "Read More",
       button2: "Contact Creative",
     },
     {
       id: 5,
       img: Img2,
-      title: "Tasks Manager App",
+      title: "AI-powered Chatbot",
+      category: "AI and Automations",
       description:
-        "Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet",
-      by: "By:Techies Africa",
+        "Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet faucibus tincidunt eu adipiscing sociis arcu lorem porttitor.",
+      by: "By: Techies Africa",
       button1: "Read More",
       button2: "Contact Creative",
     },
     {
       id: 6,
       img: Img3,
-      title: "Revolve Brand Identity",
+      title: "Security Monitoring System",
+      category: "Software Security",
       description:
-        "Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet",
-      by: "By:Techies Africa",
+        "Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet faucibus tincidunt eu adipiscing sociis arcu lorem porttitor.",
+      by: "By: Techies Africa",
       button1: "Read More",
       button2: "Contact Creative",
     },
     {
       id: 7,
       img: Img1,
-      title: "Digital Branding Website",
+      title: "Integration Platform",
+      category: "Integration & Package Dev",
       description:
-        "Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet ",
-      by: "By:Techies Africa",
+        "Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet faucibus tincidunt eu adipiscing sociis arcu lorem porttitor.",
+      by: "By: Techies Africa",
       button1: "Read More",
       button2: "Contact Creative",
     },
     {
       id: 8,
       img: Img2,
-      title: "Tasks Manager App",
+      title: "Brand Strategy Workshop",
+      category: "Branding & Design",
       description:
-        "Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet ",
-      by: "By:Techies Africa",
+        "Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet faucibus tincidunt eu adipiscing sociis arcu lorem porttitor.",
+      by: "By: Techies Africa",
       button1: "Read More",
       button2: "Contact Creative",
     },
     {
       id: 9,
       img: Img3,
-      title: "Revolve Brand Identity",
+      title: "Automation Tool Suite",
+      category: "AI and Automations",
       description:
-        "Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet ",
-      by: "By:Techies Africa",
+        "Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet faucibus tincidunt eu adipiscing sociis arcu lorem porttitor.",
+      by: "By: Techies Africa",
       button1: "Read More",
       button2: "Contact Creative",
     },
   ];
 
+  const filteredCards =
+    activeCategory === "All Projects"
+      ? cards
+      : cards.filter((card) => card.category === activeCategory);
+
   const [currentPage, setCurrentPage] = useState(1);
   const cardsPerPage = 6;
-  const totalPages = Math.ceil(cards.length / cardsPerPage);
+  const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
 
   const handlePrevPage = () => {
     setCurrentPage((prevPage) => (prevPage > 1 ? prevPage - 1 : prevPage));
@@ -114,7 +139,7 @@ const OurProject = () => {
 
   const indexOfLastCard = currentPage * cardsPerPage;
   const indexOfFirstCard = indexOfLastCard - cardsPerPage;
-  const currentCards = cards.slice(indexOfFirstCard, indexOfLastCard);
+  const currentCards = filteredCards.slice(indexOfFirstCard, indexOfLastCard);
 
   return (
     <section>
@@ -124,21 +149,38 @@ const OurProject = () => {
             <h6 className="font-semibold text-2xl pt-6 text-[#5846FB] mb-4">
               Our Projects
             </h6>
-            <h1 className="text-5xl xl:text-[70px] font-semibold mb-4  break-all xl:whitespace-nowrap">
+            <h1 className="text-5xl xl:text-[70px] font-semibold mb-4 break-all xl:whitespace-nowrap">
               Our Groundbreak{""}ing Projects
             </h1>
-
-            <p className="mb-2 mr-10  text-xl xl:text-base font-semibold text-[#000000]">
+            <p className="mb-2 mr-10 text-xl xl:text-base font-semibold text-[#000000]">
               Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet
               faucibus tincidunt eu adipiscing sociis arcu lorem porttitor.
             </p>
           </div>
+
+          {/* Categories bar */}
+          <div className="flex overflow-x-auto lg:w-[73%] xl:w-[90%] space-x-4 py-2 px-2 bg-[#EAEBF0] rounded-lg">
+            {categories.map((category) => (
+              <div
+                key={category}
+                className={`py-2 px-4 rounded-lg cursor-pointer whitespace-nowrap ${
+                  activeCategory === category
+                    ? "bg-white font-bold text-sm xl:text-base text-dark"
+                    : "bg-transparent font-bold text-sm xl:text-base text-[#5f6D7E]"
+                }`}
+                onClick={() => setActiveCategory(category)}
+              >
+                {category}
+              </div>
+            ))}
+          </div>
+
           <div className="mt-5">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {currentCards.map((card) => (
                 <div
                   key={card.id}
-                  className=" rounded-2xl shadow-md overflow-hidden sm:mr-3 md:mr-5 xl:mr-8 my-4 bg-dark"
+                  className="rounded-2xl shadow-md overflow-hidden bg-dark"
                 >
                   <div className="relative h-40">
                     <img
@@ -154,10 +196,10 @@ const OurProject = () => {
                     </p>
                     <p className="mb-4">{card.by}</p>
                     <div className="flex gap-3">
-                      <div className=" text-white text-xs lg:text-xs xl:text-base">
+                      <div className="text-white text-xs lg:text-xs xl:text-base">
                         <Button>{card.button1}</Button>
                       </div>
-                      <div className="  text-secondary text-xs lg:text-xs xl:text-base">
+                      <div className="text-secondary text-xs lg:text-xs xl:text-base">
                         <Button
                           backgroundColor="black"
                           borderColor="#A24EEC"
