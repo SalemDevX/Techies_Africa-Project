@@ -1,4 +1,5 @@
 import BackgroundImg from "../Asset/Aboutus-bg.png"
+import GetInTouch from "../Contact/GetInTouch";
 
 const ContactUs = () => {
   return (
@@ -24,6 +25,7 @@ const ContactUs = () => {
           </h1>
         </div>
       </div>
+      <GetInTouch />
     </section>
   );
 };
