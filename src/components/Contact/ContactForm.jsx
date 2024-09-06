@@ -3,7 +3,7 @@ const ContactForm = () => {
     <section className="bg-dark2">
       <div className="max-w-[90%] mx-auto pb-9">
         <div className="flex flex-col justify-center h-full text-white">
-          <h6 className="font-semibold text-2xl xl:pt-10 pt-7 text-[#5846FB] mb-4">
+          <h6 className="font-semibold text-2xl lg:pt-10 pt-7 text-[#5846FB] mb-4">
             Reach out to us
           </h6>
           <h1 className="text-5xl xl:text-[70px] font-semibold mb-4">

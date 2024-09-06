@@ -52,7 +52,7 @@ const GetInTouch = () => {
           </div>
 
           {/* Image Section */}
-          <div className="md:w-1/2 flex justify-center pt-20">
+          <div className="md:w-1/2 flex justify-center pt-20 pb-5 lg:pb-20">
             <img
               src={image}
               alt="Contact Us"
