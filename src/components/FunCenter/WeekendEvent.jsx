@@ -1,12 +1,12 @@
 import EventImg from "../Asset/PhotoRoom.png";
-import Button from "../Button";
+
 import Xsign from "../Asset/X-sign.png";
 
 const WeekendEvent = () => {
   return (
     <section className="relative ">
       <div className="" />
-      <div className="relative z-10 max-w-[90%] mx-auto items-center xl:grid lg:grid-cols-2 pt-10">
+      <div className="relative z-10 max-w-[95%] xl:max-w-[90%] mx-auto items-center xl:grid lg:grid-cols-2 pt-10">
         <div className="flex flex-col justify-center basis-1/2 xl:pt-0">
           <h6 className="font-semibold text-2xl text-white mb-4">
             Who we are at Techies Africa
