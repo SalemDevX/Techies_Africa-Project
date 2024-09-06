@@ -1,5 +1,8 @@
-import BackgroundImg from "../Asset/Aboutus-bg.png"
+import BackgroundImg from "../Asset/Aboutus-bg.png";
+import ContactForm from "../Contact/ContactForm";
 import GetInTouch from "../Contact/GetInTouch";
+import NewsLetter from "../Home/NewsLetter";
+import Footer from "../Home/Footer";
 
 const ContactUs = () => {
   return (
@@ -26,6 +29,9 @@ const ContactUs = () => {
         </div>
       </div>
       <GetInTouch />
+      <ContactForm />
+      <NewsLetter />
+      <Footer />
     </section>
   );
 };
