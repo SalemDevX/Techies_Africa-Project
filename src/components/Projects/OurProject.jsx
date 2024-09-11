@@ -4,7 +4,7 @@ import Img2 from "../Asset/Frame 383.png";
 import Img3 from "../Asset/Frame 3839.png";
 import Button from "../Button";
 import Attention from "./Attention";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import Pagination from "./Pagination ";
 
 const OurProject = () => {
   const categories = [
@@ -17,7 +17,6 @@ const OurProject = () => {
   ];
 
   const [activeCategory, setActiveCategory] = useState("All Projects");
-  const [currentPage, setCurrentPage] = useState(1);
 
   const cards = [
     {
@@ -126,28 +125,6 @@ const OurProject = () => {
       ? cards
       : cards.filter((card) => card.category === activeCategory);
 
-  const cardsPerPage = 9; // Show 9 cards per page
-  const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
-
-  const handlePrevPage = () => {
-    setCurrentPage((prevPage) => (prevPage > 1 ? prevPage - 1 : prevPage));
-  };
-
-  const handleNextPage = () => {
-    setCurrentPage((prevPage) =>
-      prevPage < totalPages ? prevPage + 1 : prevPage
-    );
-  };
-
-  const getPaginationButtons = () => {
-    return Array.from({ length: totalPages }, (_, i) => i + 1);
-  };
-
-  const currentCards = filteredCards.slice(
-    (currentPage - 1) * cardsPerPage,
-    currentPage * cardsPerPage
-  );
-
   return (
     <section>
       <div className="bg-white relative pb-12 h-full">
@@ -184,7 +161,7 @@ const OurProject = () => {
 
           <div className="mt-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
-              {currentCards.map((card) => (
+              {filteredCards.map((card) => (
                 <div
                   key={card.id}
                   className="rounded-2xl shadow-md overflow-hidden bg-dark"
@@ -222,40 +199,8 @@ const OurProject = () => {
                 </div>
               ))}
             </div>
-
-            {/* Pagination controls */}
-            <div className="flex justify-center items-center space-x-2 mt-8">
-              <button
-                onClick={handlePrevPage}
-                disabled={currentPage === 1}
-                className="p-2 border flex items-center gap-2 rounded-lg bg-white shadow-md text-gray-500 hover:bg-gray-200"
-              >
-                <FaArrowLeft /> Previous
-              </button>
-
-              {getPaginationButtons().map((pageNumber) => (
-                <button
-                  key={pageNumber}
-                  onClick={() => setCurrentPage(pageNumber)}
-                  className={`p-2 px-4 rounded-lg ${
-                    pageNumber === currentPage
-                      ? "bg-gray-200 text-gray-900 font-bold"
-                      : "bg-white text-gray-600"
-                  } shadow-md hover:bg-gray-200`}
-                >
-                  {pageNumber}
-                </button>
-              ))}
-
-              <button
-                onClick={handleNextPage}
-                disabled={currentPage === totalPages}
-                className="p-2 flex items-center gap-2 border rounded-lg bg-white shadow-md text-gray-500 hover:bg-gray-200"
-              >
-                Next <FaArrowRight />
-              </button>
-            </div>
           </div>
+          <Pagination />
         </div>
       </div>
       <Attention />
