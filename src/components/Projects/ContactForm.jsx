@@ -23,7 +23,7 @@ const ContactForm = () => {
               <input
                 type="text"
                 placeholder="e.g. Alex Tolu"
-                className="mt-1 block w-full px-3 py-2 border border-[#DAE0E6] rounded-md shadow-sm focus:outline-none focus:ring-[#DAE0E6]focus:border-dark"
+                className="mt-1 block w-full px-3 py-2 border border-[#DAE0E6] rounded-md shadow-sm focus:outline-none focus:ring-[#DAE0E6] focus:border-dark"
               />
             </div>
             <div>
@@ -33,7 +33,7 @@ const ContactForm = () => {
               <input
                 type="email"
                 placeholder="e.g. alextolu@gmail.com"
-                className="mt-1 block w-full px-3 py-2 border border-[#DAE0E6] rounded-md shadow-sm focus:outline-none focus:ring-[#DAE0E6]focus:border-dark"
+                className="mt-1 block w-full px-3 py-2 border border-[#DAE0E6] rounded-md shadow-sm focus:outline-none focus:ring-[#DAE0E6] focus:border-dark"
               />
             </div>
             <div>

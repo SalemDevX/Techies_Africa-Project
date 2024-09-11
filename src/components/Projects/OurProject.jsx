@@ -142,16 +142,21 @@ const OurProject = () => {
   const indexOfFirstCard = indexOfLastCard - cardsPerPage;
   const currentCards = filteredCards.slice(indexOfFirstCard, indexOfLastCard);
 
+  const getPaginationGroup = () => {
+    let start = Math.floor((currentPage - 1) / 3) * 3;
+    return new Array(3).fill().map((_, idx) => start + idx + 1);
+  };
+
   return (
     <section>
       <div className="bg-white relative pb-12 h-full">
-        <div className="max-w-[90%] mx-auto   xl:mb-0  items-center h-full">
+        <div className="max-w-[90%] mx-auto xl:mb-0 items-center h-full">
           <div className="flex flex-col justify-center h-full text-dark">
             <h6 className="font-semibold text-2xl xl:mt-10 pt-7 text-[#5846FB] mb-4">
               Our Projects
             </h6>
             <h1 className="text-5xl xl:text-[70px] font-semibold mb-4 break-all xl:whitespace-nowrap">
-              Our Groundbreak{""}ing Projects
+              Our Groundbreaking Projects
             </h1>
             <p className="mb-2 mr-10 text-xl xl:text-base font-semibold text-[#000000]">
               Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet
@@ -176,6 +181,7 @@ const OurProject = () => {
             ))}
           </div>
 
+          {/* Cards */}
           <div className="mt-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
               {currentCards.map((card) => (
@@ -218,23 +224,56 @@ const OurProject = () => {
             </div>
 
             {/* Pagination controls */}
-            <div className="flex justify-between items-center mt-8">
+            <div className="flex justify-center items-center mt-8 space-x-2">
+              {/* Previous Button */}
               <button
                 onClick={handlePrevPage}
                 disabled={currentPage === 1}
-                className="bg-gray-300 py-2 px-4 rounded-lg"
+                className="p-2 border rounded-lg bg-white shadow-md text-gray-500 hover:bg-gray-200"
               >
-                Previous
+                ←
               </button>
-              <span className="text-gray-700">
-                Page {currentPage} of {totalPages}
-              </span>
+
+              {/* Page Numbers */}
+              {getPaginationGroup().map((pageNumber) => (
+                <button
+                  key={pageNumber}
+                  onClick={() => setCurrentPage(pageNumber)}
+                  className={`p-2 px-4 rounded-lg ${
+                    pageNumber === currentPage
+                      ? "bg-gray-200 text-gray-900 font-bold"
+                      : "bg-white text-gray-600 hover:bg-gray-100"
+                  }`}
+                >
+                  {pageNumber}
+                </button>
+              ))}
+
+              {totalPages > 3 && currentPage < totalPages && (
+                <span className="p-2 text-gray-500">...</span>
+              )}
+
+              {/* Last Page */}
+              {totalPages > 3 && (
+                <button
+                  onClick={() => setCurrentPage(totalPages)}
+                  className={`p-2 px-4 rounded-lg ${
+                    totalPages === currentPage
+                      ? "bg-gray-200 text-gray-900 font-bold"
+                      : "bg-white text-gray-600 hover:bg-gray-100"
+                  }`}
+                >
+                  {totalPages}
+                </button>
+              )}
+
+              {/* Next Button */}
               <button
                 onClick={handleNextPage}
                 disabled={currentPage === totalPages}
-                className="bg-gray-300 py-2 px-4 rounded-lg"
+                className="p-2 border rounded-lg bg-white shadow-md text-gray-500 hover:bg-gray-200"
               >
-                Next
+                →
               </button>
             </div>
           </div>
