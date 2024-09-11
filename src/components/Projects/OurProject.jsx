@@ -4,6 +4,7 @@ import Img2 from "../Asset/Frame 383.png";
 import Img3 from "../Asset/Frame 3839.png";
 import Button from "../Button";
 import Attention from "./Attention";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const OurProject = () => {
   const categories = [
@@ -16,6 +17,7 @@ const OurProject = () => {
   ];
 
   const [activeCategory, setActiveCategory] = useState("All Projects");
+  const [currentPage, setCurrentPage] = useState(1);
 
   const cards = [
     {
@@ -124,8 +126,7 @@ const OurProject = () => {
       ? cards
       : cards.filter((card) => card.category === activeCategory);
 
-  const [currentPage, setCurrentPage] = useState(1);
-  const cardsPerPage = 6;
+  const cardsPerPage = 9; // Show 9 cards per page
   const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
 
   const handlePrevPage = () => {
@@ -138,14 +139,14 @@ const OurProject = () => {
     );
   };
 
-  const indexOfLastCard = currentPage * cardsPerPage;
-  const indexOfFirstCard = indexOfLastCard - cardsPerPage;
-  const currentCards = filteredCards.slice(indexOfFirstCard, indexOfLastCard);
-
-  const getPaginationGroup = () => {
-    let start = Math.floor((currentPage - 1) / 3) * 3;
-    return new Array(3).fill().map((_, idx) => start + idx + 1);
+  const getPaginationButtons = () => {
+    return Array.from({ length: totalPages }, (_, i) => i + 1);
   };
+
+  const currentCards = filteredCards.slice(
+    (currentPage - 1) * cardsPerPage,
+    currentPage * cardsPerPage
+  );
 
   return (
     <section>
@@ -156,7 +157,7 @@ const OurProject = () => {
               Our Projects
             </h6>
             <h1 className="text-5xl xl:text-[70px] font-semibold mb-4 break-all xl:whitespace-nowrap">
-              Our Groundbreaking Projects
+              Our Groundbreak{""}ing Projects
             </h1>
             <p className="mb-2 mr-10 text-xl xl:text-base font-semibold text-[#000000]">
               Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet
@@ -181,7 +182,6 @@ const OurProject = () => {
             ))}
           </div>
 
-          {/* Cards */}
           <div className="mt-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
               {currentCards.map((card) => (
@@ -224,56 +224,35 @@ const OurProject = () => {
             </div>
 
             {/* Pagination controls */}
-            <div className="flex justify-center items-center mt-8 space-x-2">
-              {/* Previous Button */}
+            <div className="flex justify-center items-center space-x-2 mt-8">
               <button
                 onClick={handlePrevPage}
                 disabled={currentPage === 1}
-                className="p-2 border rounded-lg bg-white shadow-md text-gray-500 hover:bg-gray-200"
+                className="p-2 border flex items-center gap-2 rounded-lg bg-white shadow-md text-gray-500 hover:bg-gray-200"
               >
-                ←
+                <FaArrowLeft /> Previous
               </button>
 
-              {/* Page Numbers */}
-              {getPaginationGroup().map((pageNumber) => (
+              {getPaginationButtons().map((pageNumber) => (
                 <button
                   key={pageNumber}
                   onClick={() => setCurrentPage(pageNumber)}
                   className={`p-2 px-4 rounded-lg ${
                     pageNumber === currentPage
                       ? "bg-gray-200 text-gray-900 font-bold"
-                      : "bg-white text-gray-600 hover:bg-gray-100"
-                  }`}
+                      : "bg-white text-gray-600"
+                  } shadow-md hover:bg-gray-200`}
                 >
                   {pageNumber}
                 </button>
               ))}
 
-              {totalPages > 3 && currentPage < totalPages && (
-                <span className="p-2 text-gray-500">...</span>
-              )}
-
-              {/* Last Page */}
-              {totalPages > 3 && (
-                <button
-                  onClick={() => setCurrentPage(totalPages)}
-                  className={`p-2 px-4 rounded-lg ${
-                    totalPages === currentPage
-                      ? "bg-gray-200 text-gray-900 font-bold"
-                      : "bg-white text-gray-600 hover:bg-gray-100"
-                  }`}
-                >
-                  {totalPages}
-                </button>
-              )}
-
-              {/* Next Button */}
               <button
                 onClick={handleNextPage}
                 disabled={currentPage === totalPages}
-                className="p-2 border rounded-lg bg-white shadow-md text-gray-500 hover:bg-gray-200"
+                className="p-2 flex items-center gap-2 border rounded-lg bg-white shadow-md text-gray-500 hover:bg-gray-200"
               >
-                →
+                Next <FaArrowRight />
               </button>
             </div>
           </div>
