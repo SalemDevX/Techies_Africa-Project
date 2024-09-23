@@ -72,31 +72,7 @@ const Pagination = () => {
               </button>
             ))}
 
-            {!showMore && (
-              <button
-                onClick={handleToggleMore}
-                className="px-4 py-2 rounded-lg bg-white text-gray-600 hover:bg-gray-200"
-              >
-                ...
-              </button>
-            )}
-            {showMore && (
-              <>
-                {[4, 5, 6, 7, 8, 9, 10].map((page) => (
-                  <button
-                    key={page}
-                    onClick={() => handlePageClick(page)}
-                    className={`px-4 py-2 rounded-lg ${
-                      currentPage === page
-                        ? "bg-[#EFF1F4] font-semibold"
-                        : "bg-white text-gray-600 hover:bg-gray-200"
-                    }`}
-                  >
-                    {page}
-                  </button>
-                ))}
-              </>
-            )}
+            <span className="px-4 py-2">...</span> {/* Static "..." for small screens */}
           </div>
         </div>
 
