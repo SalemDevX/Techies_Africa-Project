@@ -12,7 +12,7 @@ function App() {
   const location = useLocation();
 
   const pageVariants = {
-    initial: { opacity: 0, y: 100 }, // Start offscreen at the bottom
+    initial: { opacity: 0, y: 100 }, // Start offscreen at the up
     in: { opacity: 1, y: 0 }, // Move in
     out: { opacity: 0, y: -100 }, // Move out upwards
   };
@@ -23,12 +23,12 @@ function App() {
   };
 
   const pageVariants2 = {
-    initial: { opacity: 0, x: -100 }, // Start offscreen at the bottom
+    initial: { opacity: 0, x: -100 }, // Start offscreen at the left
     in: { opacity: 1, x: 0 }, // Move in
     out: { opacity: 0, x: 100 }, // Move out upwards
   };
   const pageVariants3 = {
-    initial: { opacity: 0, x: 100 }, // Start offscreen at the bottom
+    initial: { opacity: 0, x: 100 }, // Start offscreen at the right
     in: { opacity: 1, x: 0 }, // Move in
     out: { opacity: 0, x: -100 }, // Move out upwards
   };
