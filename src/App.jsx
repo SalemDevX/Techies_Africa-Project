@@ -16,7 +16,25 @@ function App() {
     in: { opacity: 1, y: 0 }, // Move in
     out: { opacity: 0, y: -100 }, // Move out upwards
   };
+  const pageVariants1 = {
+  initial: { opacity: 0, y: -100 }, // Start offscreen at the bottom
+    in: { opacity: 1, y: 0 }, // Move in
+    out: { opacity: 0, y: 100 }, // Move out upwards
+  };
 
+  const pageVariants2 = {
+    initial: { opacity: 0, x: -100 }, // Start offscreen at the bottom
+    in: { opacity: 1, x: 0 }, // Move in
+    out: { opacity: 0, x: 100 }, // Move out upwards
+  };
+  const pageVariants3 = {
+    initial: { opacity: 0, x: 100 }, // Start offscreen at the bottom
+    in: { opacity: 1, x: 0 }, // Move in
+    out: { opacity: 0, x: -100 }, // Move out upwards
+  };
+
+ 
+  
   const pageTransition = {
     duration: 0.5, // Control the speed of the animation
   };
@@ -32,7 +50,7 @@ function App() {
                 initial="initial"
                 animate="in"
                 exit="out"
-                variants={pageVariants}
+                variants={pageVariants1}
                 transition={pageTransition}
               >
                 <Home />
@@ -46,7 +64,7 @@ function App() {
                 initial="initial"
                 animate="in"
                 exit="out"
-                variants={pageVariants}
+                variants={pageVariants2}
                 transition={pageTransition}
               >
                 <AboutUs />
@@ -60,7 +78,7 @@ function App() {
                 initial="initial"
                 animate="in"
                 exit="out"
-                variants={pageVariants}
+                variants={pageVariants3}
                 transition={pageTransition}
               >
                 <Services />
@@ -74,7 +92,7 @@ function App() {
                 initial="initial"
                 animate="in"
                 exit="out"
-                variants={pageVariants}
+                variants={pageVariants2}
                 transition={pageTransition}
               >
                 <Projects />
@@ -102,7 +120,7 @@ function App() {
                 initial="initial"
                 animate="in"
                 exit="out"
-                variants={pageVariants}
+                variants={pageVariants3}
                 transition={pageTransition}
               >
                 <ContactUs />
